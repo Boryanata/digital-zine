@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surveillance Magazine</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <!-- Add Crimson Text for the cover title -->
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <!-- Add Rousseau Deco font link from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rousseau+Deco&display=swap" rel="stylesheet">
+  <!-- Add Orwellian font link from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orwellian&display=swap" rel="stylesheet">
+  <!-- Add Special Elite font link from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <!-- jQuery and Turn.js CDN links -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+</head>
+<body>
+  <!-- Magazine container for Turn.js -->
+  <div id="magazine">
+    <!-- Page 1: Cover -->
+    <div class="page">
+      <img src="assets/img/Surveillance-Magazine-Cover.png" alt="Magazine Cover Image">
+      <div class="cover-title">A Brief History of Surveillance</div>
+    </div>
+
+    <!-- Page 2: Blank (often needed for even spreads) -->
+    <div class="page"><div class="page-content"></div></div>
+
+    <!-- Page 3: Left side of the first article spread -->
+    <div class="page">
+      <div class="page-content">
+        <!-- Page Header -->
+        <div class="page-header">
+          <span class="page-number">1</span>
+          <span class="magazine-title">Surveillance & Society</span>
+        </div>
+        <hr class="header-separator">
+        <h1>Surveillance in America</h1>
+        <h2> Origins</h2>
+        <p>Surveillance may be thought of as systematic attention to personal details for the purposes of influence, management, or control. Some surveillance is personal, face-to-face supervision, but the main concern is situations in which data are routinely collected. Such systematic collection of personal information is not a new phenomenon in American society. 
+        </p>
+        <p>As far back as the colonial era, organizations were actively interested in the details of people's daily lives. While the intensity and scope of surveillance have varied since the 17th century, the same factors shape them: the interests of those in positions of power, the technology available to them, and the legal frameworks within which they operate.
+        </p>
+        <!-- <img src="Street-Surveillance.png" alt="Street Surveillance" class="retro-image"> -->
+      </div>
+    </div>
+
+    <!-- Page 4: Right side of the first article spread -->
+    <div class="page">
+      <div class="page-content">
+        <!-- Page Header -->
+        <div class="page-header">
+          <span class="page-number">2</span>
+          <span class="magazine-title">Surveillance & Society</span>
+        </div>
+        <hr class="header-separator">
+        <h2>Historical Phases of Surveillance in the U.S.</h2>
+        <p></p>
+        <h3>1. Colonial New England (1650–1776)</h3>
+        <img src="assets/img/Puritan-Watchfulness.png" alt="Puritan Watchfulness" class="retro-image">
+        <ul>
+          <li>The physical conditions of frontier life played an important role.</li>
+          <li>Surveillance was communal, based on the Puritan ethic of moral supervision.</li>
+          <li>People lived in small communities with little privacy; "watchfulness" was a social norm to prevent others from wrongdoing.</li>
+          <li>Religious norms heavily shaped expectations of behavior and justified mutual oversight.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="page">
+        <div class="page-content">
+          <!-- Page Header -->
+          <div class="page-header">
+            <span class="page-number">3</span>
+            <span class="magazine-title">Surveillance & Society</span>
+          </div>
+          <hr class="header-separator">
+          <h3>2. Early Republic (1776–1861)</h3>
+          <img src="assets/img/American-revolution.png" alt="American Revolution" class="retro-image small">
+          <ul>
+            <li>The increasing mobility of individuals and the growth of urban centers made keeping tabs on one's neighbors increasingly difficult.</li>
+            <li>The turning point in this phase was the American Revolution.</li>
+            <li>Surveillance shifted from religious to political tools.</li>
+          </ul>
+          <ul>
+             <li>Institutional surveillance in Western society is rooted in <strong> military organization, the bureaucratic state, and the capitalist enterprise</strong>.</li>
+            <li>The revolutionary era marked the first instance of political-loyalty surveillance in the interest of national security.</li>
+            <li>The Bill of Rights was intended to shield citizens (only white male adults!) from unrestricted surveillance by those in power and thus to avoid the development of authoritarian society, such as that of feudal Europe.</li>
+          </ul>
+        </div>
+      </div>
+
+    <!-- Add new pages for the rest of the content -->
+    <div class="page">
+      <div class="page-content">
+        <!-- Page Header -->
+        <div class="page-header">
+          <span class="page-number">3</span>
+          <span class="magazine-title">Surveillance & Society</span>
+        </div>
+        <hr class="header-separator">
+        <h3>3. Modern Republic (1861–1950)</h3>
+        <ul>
+          <p></p>
+          <li>Many contemporary surveillance technologies owe their existence to late-19th-century American enterprise.</li>
+          <li>Photographic and sound-recording technology made it possible to record people's actions and words from a distance and without their consent.</li>
+          <li> An efficient source of bodily identification — the fingerprint — further revolutionized the identification of citizens.</li>
+          <li>By 1902, fingerprints were systematically used by U.S. authorities, beginning with the New York Civil Service Commission.</li>
+          <li>- In 1924, the Federal Bureau of Investigation (FBI) received a legislative mandate to manage a national fingerprint card database, which contained 100 million records by 1946.</li>
+          <li>Surveillance became bureaucratized through census, IRS, and employment records.</li>
+          <li><strong>Loyalty surveillance</strong> intensified during wartime (e.g., WWI, WWII) - Espionage Act, June 1917.</li>
+          <li>The Espionage Act remains coded in U.S. law to this day.</li>
+          <li>The most overt uses of workplace behavior monitoring and record keeping took place in the private sector.</li>
+          <li>Early business surveillance focused on two distinct objectives: the monitoring of the worker and the investigation of consumer behavior.</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="page">
+        <div class="page-content">
+          <!-- Page Header -->
+          <div class="page-header">
+            <span class="page-number">4</span>
+            <span class="magazine-title">Surveillance & Society</span>
+          </div>
+          <hr class="header-separator">
+          <img src="assets/img/Fingerprints_transparent.png" alt="Fingerprints" class="retro-image fingerprints-image">
+        </div>
+      </div>
+
+    <div class="page">
+        <div class="page-content">
+          <!-- Page Header -->
+          <div class="page-header">
+            <span class="page-number">5</span>
+            <span class="magazine-title">Surveillance & Society</span>
+          </div>
+          <hr class="header-separator">
+          <h3>4. Cold War America (1950–1980)</h3>
+          <img src="assets/img/Computer-power.png" alt="Computer Power" class="retro-image computer-image">
+          <ul>
+            <li>Mass surveillance expanded, especially under anti-Communist and anti-civil rights campaigns.</li>
+            <li>Computers enabled centralized databases and detailed individual profiles - addressed problems of space and time.</li>
+            <li>Federal, state, and local government agencies collected growing volumes of data. </li>
+            <li>Government invested vast resources in the computerization of their systems.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="page">
+        <div class="page-content">
+          <!-- Page Header -->
+          <div class="page-header">
+            <span class="page-number">6</span>
+            <span class="magazine-title">Surveillance & Society</span>
+          </div>
+          <hr class="header-separator">
+          <h3>5. Globalized America (1980–2020)</h3>
+          <ul>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <li>Computers, the internet, biometrics, DNA analysis, and digital marketing transformed surveillance into a pervasive and decentralized system.</li>
+            <li>The marketing sector exploited consumer data for profiling and targeting.</li>
+            <li>9/11 led to a massive resurgence of state surveillance under the USA Patriot Act (2001).</li>
+            <li>Despite laws targeting specific industries, comprehensive privacy protections remain limited.</li>
+          </ul>
+        </div>
+      </div>
+
+    <!-- New Page 7
+    <div class="page">
+      <div class="page-content">
+        <!-- Content for the new page goes here -->
+      <!-- </div>
+    </div> --> 
+
+    <div class="page">
+        <div class="page-content">
+          <!-- Page Header -->
+          <div class="page-header">
+            <span class="page-number">7</span>
+            <span class="magazine-title">Surveillance & Society</span>
+          </div>
+          <hr class="header-separator">
+          <h2>6. Supercharged Surveillance (2020 - now)</h2>
+          <img src="assets/img/Constant-Surveillance.png" alt="Street Surveillance" class="retro-image">
+          <ul>
+          
+            <li>Fueled by the rise and sophistication of artificial intelligence systems. </li>
+            <li>AI and ML-driven risk assessment frameworks allow clients to uncover "threats" in vast amounts of unstructured data.</li>
+            <li>15,000 contracts held by ICE and CIS, $7.8 billion spent on immigration technologies since 2020.</li>
+            <li>Contracts with LexisNexis, Palantir, Venntel, Clearview AI and Thomson Reuters, which collect and sell sensitive personal data — incl. location data and facial recognition data.</li>
+          </ul>
+          <p></p>
+        </div>
+      </div>
+
+    <div class="page">
+      <div class="page-content">
+        <!-- Page Header -->
+        <div class="page-header">
+          <span class="page-number">8</span>
+          <span class="magazine-title">Surveillance & Society</span>
+        </div>
+        <hr class="header-separator">
+        <h2>Takeaways</h2>
+        <ul>
+        
+          <li>Surveillance has grown from moral community enforcement to vast, automated data systems.</li>
+          <li>Technological change has consistently outpaced privacy protections.</li>
+          <li>Legal safeguards exist but are often fragmented, sector-specific, or weakly enforced.</li>
+          <li>Surveillance power continues to oscillate between the state and private corporations, especially in times of crisis.</li>
+        </ul>
+        <p></p>
+        <h2>Acknowledgements</h2>
+        <p>Visual inspiration: Processed World magazine.</p>
+        <p>Conceptual inspiration: writings by David Lyon, Howard Zinn, Shoshana Zuboff, Bart Bonikowski, The Information Society magazine, Surveillance and Society magazine.</p>
+        <p>Images created with the help of AI.</p>
+      </div>
+    </div>
+
+    <!-- Add more page divs here for additional spreads -->
+
+  </div>
+
+  <script>
+    $(document).ready(function() {
+        $('#magazine').turn({
+            width: window.innerWidth * 0.95, // 95% of viewport width
+            height: window.innerHeight * 0.95, // 95% of viewport height
+            gradients: true, // Show gradients
+            elevation: 50, // Add a shadow to the page turns
+            display: 'double', // Display pages as a double spread
+            when: {
+                turning: function(event, page, view) {
+                    // Optional: Add code here to do something when a page starts turning
+                },
+                turned: function(event, page, view) {
+                    // Optional: Add code here to do something after a page has turned
+                }
+            }
+        });
+    });
+  </script>
+</body>
+</html> 

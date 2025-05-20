@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,400&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #e7dfc6;
+  font-family: 'Special Elite', 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#magazine {
+  position: relative;
+  margin: auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  width: 95vw;
+  height: 95vh;
+}
+
+.magazine-spread {
+  display: flex;
+  width: 90vw;
+  max-width: 1200px;
+  min-width: 700px;
+  height: 90vh;
+  min-height: 400px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  position: relative;
+}
+
+/* Add a pseudo-element for the magazine spine */
+#magazine::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px; /* Further reduced width of the spine */
+  height: 100%;
+  /* Adjusted background for a more analogue look - trying color and image together */
+  background: #5b4d41 url('https://www.transparenttextures.com/patterns/dark-fish-skin.png'); /* Muted brownish-grey color with texture */
+  background-blend-mode: multiply; /* Keep multiply for texture */
+  /* Modified box-shadow for a more natural look */
+  box-shadow:
+    0 0 3px rgba(0, 0, 0, 0.8), /* Inner shadow on the spine itself */
+    /* Added more shadow around the spine */
+    -5px 0 8px rgba(0, 0, 0, 0.3), /* Shadow left of spine */
+    5px 0 8px rgba(0, 0, 0, 0.3), /* Shadow right of spine */
+    -10px 0 15px rgba(0, 0, 0, 0.2), /* Wider shadow left */
+    10px 0 15px rgba(0, 0, 0, 0.2); /* Wider shadow right */
+  z-index: 2; /* Ensure it's above the pages */
+  transform: translateX(-50%); /* Center the spine */
+  border-radius: 1px; /* Keep border radius very small */
+  opacity: 0.7; /* Reduce opacity to make it less solid black */
+}
+
+/* Styles for the container managed by Turn.js */
+.page {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+/* Styles for the actual content area inside the page */
+.page-content {
+  background: url('https://www.transparenttextures.com/patterns/old-mathematics.png'), #f5ecd7;
+  background-blend-mode: multiply;
+  border: none;
+  box-shadow:
+    0 0 0 3px #c1121f,
+    0 0 0 6px rgba(193, 18, 31, 0.4),
+    2px 2px 8px rgba(80,60,30,0.3),
+    /* Added shadows for worn edges */
+    -1px -1px 3px rgba(0, 0, 0, 0.2), /* Top-left corner wear */
+    1px -1px 3px rgba(0, 0, 0, 0.2), /* Top-right corner wear */
+    -1px 1px 3px rgba(0, 0, 0, 0.2), /* Bottom-left corner wear */
+    1px 1px 3px rgba(0, 0, 0, 0.2), /* Bottom-right corner wear */
+    0 0 5px rgba(0, 0, 0, 0.3), /* General edge darkening */
+    inset 0 0 10px rgba(80, 60, 30, 0.1),
+    /* Added shadowy border */
+    0 0 12px 2px rgba(0, 0, 0, 0.4),
+    /* Added blurry inner border */
+    inset 0 0 15px rgba(0, 0, 0, 0.4); /* Blurry inner shadow around text */
+  border-radius: 6px;
+  padding: 1em 1.5em 2em 1.5em; /* Base padding */
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: visible; /* Ensure content is not clipped */
+}
+
+/* Style for the text content wrapper in Early Republic section */
+/* Remove this rule */
+/* .early-republic-text { ... } */
+
+/* Smaller version of retro-image for the American Revolution */
+.retro-image.small {
+  transform: scale(0.6);
+  transform-origin: top right;
+  margin: 0 0 -6em 0.05em; /* Further increased negative bottom margin */
+  float: right; /* Re-add float */
+  z-index: 1;
+  /* Remove flex properties */
+  align-self: auto;
+  flex-shrink: 0; /* Keep flex-shrink */
+}
+
+/* Remove top margin from the ul that follows a small retro image */
+.retro-image.small + ul {
+  margin-top: 0; /* Keep margin-top 0 */
+  clear: right; /* Re-add clear right */
+}
+
+h1, h2, h3 {
+  font-family: 'Special Elite', 'Courier New', Courier, monospace;
+  color: #c1121f;
+  margin-top: 0.5em;
+  text-shadow: 1px 1px 0 #fff, 0 0 2px #c1121f44;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  font-size: 2vw;
+  letter-spacing: 2.5px;
+  margin-bottom: 0.2em;
+  color: #222;
+}
+
+h2 {
+  font-size: 1.2vw;
+  margin-bottom: 0.5em;
+  color: #c1121f;
+}
+
+h3 {
+  font-size: 1vw;
+  margin-bottom: 0.3em;
+  color: #c1121f;
+}
+
+ul {
+  margin-top: 0.2em;
+  margin-bottom: 1em;
+  padding-left: 1.2em;
+}
+
+li {
+  margin-bottom: 0.3em;
+  font-size: 1vw;
+  color: #222;
+  line-height: 1.8; /* Increased line spacing for list items */
+}
+
+p {
+  font-size: 1vw;
+  line-height: 1.8; /* Increased from 1.5 to 1.8 */
+  color: #222;
+}
+
+.retro-image {
+  width: auto; /* Allow width to adjust based on height and max-width */
+  max-width: 93%; /* Ensure it's not exceed the content width */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 47vh; /* Revert max-height */
+  margin: 1em auto 0.3em auto;
+  display: block;
+  filter: grayscale(0.6) contrast(1.1) sepia(0.4);
+  border: 2px solid #c1121f;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 2px;
+  object-fit: contain; /* Ensure image maintains aspect ratio within bounds */
+  z-index: 20; /* Increased z-index to be higher than page-content::before */
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+/* Add padding to the bottom of .page-content when it contains the fingerprints image */
+.page-content:has(.fingerprints-image) {
+  padding-bottom: 4.8em; /* Add space below the image */
+}
+
+.fingerprints-image {
+  max-height: 85vh; /* Allow this specific image to be taller */
+  width: auto; /* Maintain aspect ratio */
+  margin-top: 0.5em; /* Reduced top margin */
+  margin-right: auto; /* Center horizontally like retro-image */
+  margin-bottom: 6em; /* Add space below the image */
+  margin-left: auto; /* Center horizontally like retro-image */
+}
+
+.computer-image {
+  max-width: 97%; /* Increased max-width */
+  max-height: 53vh; /* Increased max-height */
+  display: block; /* Ensure it's on its own line */
+  margin: 1em auto; /* Center and add margin */
+}
+
+/* Re-added paper fibers overlay applied to page-content */
+.page-content::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  opacity: 0.25;
+  z-index: 1;
+}
+
+/* Basic styles for Turn.js pages container */
+#magazine .page {
+  background-color: transparent;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Styles for the cover page (first page) */
+#magazine .page:first-child {
+    background: url('https://www.transparenttextures.com/patterns/old-mathematics.png'), #f5ecd7;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the cover image to fill the first page */
+#magazine .page:first-child img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 55% 50%;
+    border: none;
+    box-shadow: none;
+    filter: grayscale(0.3) contrast(1.3) sepia(0);
+    z-index: 0;
+}
+
+/* Apply the paper fibers overlay to the cover page directly as it doesn't have .page-content */
+#magazine .page:first-child::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    opacity: 0.45; /* Increased opacity for more prominent grain */
+    z-index: 1; /* Ensure overlay is above the image */
+}
+
+/* Add styles for the cover title */
+.cover-title {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #b22222; /* Firebrick red */
+    font-family: 'Special Elite', sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+    text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    width: 85%;
+    line-height: 1.1;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-style: italic;
+    padding: 0.4em 0.3em;
+    background: rgba(230, 209, 165, 0.98);
+    border: 1px solid rgba(193, 18, 31, 0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+  h1 { font-size: 4vw; }
+  h2 { font-size: 2.2vw; }
+  h3 { font-size: 1.8vw; }
+  p, li { font-size: 2vw; }
+}
+
+/* Styles for the page header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em; /* Space below the header */
+  font-family: 'Special Elite', 'Courier New', Courier, monospace;
+  color: #222; /* Text color for header */
+  font-size: 0.9vw; /* Adjust font size */
+  letter-spacing: 0.5px;
+}
+
+.page-number {
+  /* Optional: add specific styles if needed */
+}
+
+.magazine-title {
+  /* Optional: add specific styles if needed */
+}
+
+.header-separator {
+  border: none;
+  border-top: 1px solid #c1121f; /* Red separating line */
+  margin: 0.5em 0 1em 0; /* Space above and below the line */
+}
+
+.image-and-content-wrap {
+  display: flex;
+  flex-wrap: wrap; /* Allow content to wrap */
+  align-items: flex-start;
+  margin-top: 1em; /* Space below the header separator */
+  padding-right: 0;
+  position: static;
+}
+
+.image-and-content-wrap > div {
+  flex-grow: 1; /* Allow the text content to take up remaining space */
+  margin-top: 0;
+}

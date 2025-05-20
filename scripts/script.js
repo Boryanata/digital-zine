@@ -1,0 +1,1 @@
+// The CSS handles the opening animation. No extra JS needed for now. 
